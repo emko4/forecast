@@ -1,18 +1,24 @@
 @import '../../../../../../styles/constants';
 
-.autocomplete {
+$input-horizontal-padding: 20px;
+$border-width: 2px;
 
+.autocomplete {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .autocomplete .input {
   position: relative;
+  width: 100%;
 }
 
 .autocomplete .input > input {
-  width: 400px;
-  padding: 5px 20px;
+  width: calc(100% - #{$input-horizontal-padding * 2} - #{$border-width * 2});
+  padding: 5px $input-horizontal-padding;
 
-  border: 2px solid $base-color;
+  border: $border-width solid $base-color;
   outline: 0;
 
   font-size: 1.5em;
@@ -25,7 +31,7 @@
   left: 0;
   right: 0;
 
-  border: 2px solid $base-color;
+  border: $border-width solid $base-color;
   border-top: 0;
 
   background-color: white;

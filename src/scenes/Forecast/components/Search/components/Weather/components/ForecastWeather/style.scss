@@ -1,0 +1,14 @@
+@import '../../../../../../../../styles/constants';
+
+.forecast-weather-item {
+  display: flex;
+  margin: 15px 0;
+  padding: 5px;
+
+  border: 1px solid $base-color;
+}
+
+.forecast-weather-item .icon {
+  width: 64px;
+  height: 64px;
+}

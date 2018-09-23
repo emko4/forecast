@@ -5,7 +5,7 @@
 }
 
 .weather .loader {
-  width: 66px;
+  width: 100%;
   height: 66px;
 
   background: url('../../../../../../assets/loader.gif') center center no-repeat;
@@ -20,4 +20,10 @@
   text-transform: uppercase;
 
   margin-bottom: 20px;
+}
+
+.weather .weather-wrap .title {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
 }

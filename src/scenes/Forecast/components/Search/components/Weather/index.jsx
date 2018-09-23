@@ -6,6 +6,9 @@ import _ from 'lodash';
 
 import { LOCALE_PREFIX } from './constants';
 
+import CurrentWeather from './components/CurrentWeather';
+import ForecastWeather from './components/ForecastWeather';
+
 import hocConnect from './hocConnect';
 
 import './style.scss';
@@ -51,7 +54,7 @@ export default class Weather extends Component {
 
         if (loading || _.isEmpty(forecast)) return null;
 
-        const location = `${forecast.location.name}, ${forecast.location.region}, ${forecast.location.country}`;
+        const location = `${forecast.location.name}, ${forecast.location.region}, ${forecast.location.name}`;
 
         return (
             <div className={'weather-wrap'}>
@@ -59,10 +62,14 @@ export default class Weather extends Component {
                     {location}
                 </div>
                 <div className={'current'}>
-                    <div>{'Current weather'}</div>
+                    <div className={'title'}>{'Current weather'}</div>
+                    <CurrentWeather weather={forecast.current} />
                 </div>
                 <div className={'forecast'}>
-                    <div>{'7 days forecast'}</div>
+                    <div className={'title'}>{'7 days forecast'}</div>
+                    {_.map(forecast.forecast.forecastday, (day, index) => (
+                        <ForecastWeather key={index} weather={day} />
+                    ))}
                 </div>
             </div>
         );
