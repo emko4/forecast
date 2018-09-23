@@ -1,0 +1,42 @@
+@import '../../styles/constants';
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.error-page .error-page-content {
+  color: blue;
+}
+
+.error-page .error-page-content .title {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.error-page .error-page-content .action-wrap {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.5em;
+}
+
+.error-page .error-page-content .action-wrap .refresh-button {
+  position: relative;
+  margin-left: 100px;
+  padding: 10px 15px;
+
+  border: 0;
+  background-color: blue;
+  outline: 0;
+
+  color: white;
+
+  cursor: pointer;
+  user-select: none;
+}
