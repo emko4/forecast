@@ -1,0 +1,32 @@
+@import '../../../../../../styles/constants';
+
+.autocomplete {
+
+}
+
+.autocomplete .input {
+  position: relative;
+}
+
+.autocomplete .input > input {
+  width: 400px;
+  padding: 5px 20px;
+
+  border: 2px solid $base-color;
+  outline: 0;
+
+  font-size: 1.5em;
+  color: $text-color;
+}
+
+.autocomplete .results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  border: 2px solid $base-color;
+  border-top: 0;
+
+  background-color: white;
+}

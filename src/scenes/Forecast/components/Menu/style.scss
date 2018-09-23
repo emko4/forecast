@@ -1,0 +1,26 @@
+@import '../../../../styles/constants';
+
+.menu {
+  display: flex;
+  height: $menu-height;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.menu .title {
+  font-size: 1.7em;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.menu .localizations {
+  display: flex;
+}
+
+.menu .localizations .flag {
+  margin-left: 10px;
+
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+@import '../../../../../../styles/constants';
+
+.weather {
+
+}
+
+.weather .loader {
+  width: 66px;
+  height: 66px;
+
+  background: url('../../../../../../assets/loader.gif') center center no-repeat;
+}
+
+.weather .weather-wrap {
+
+}
+
+.weather .weather-wrap .location {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}

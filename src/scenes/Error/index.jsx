@@ -8,7 +8,7 @@ import './style.scss';
 export default class Error extends Component {
 
     onButtonClick = () => {
-        window.location.reload(true);
+        window.location.href = '/';
     }
 
     render() {

@@ -3,10 +3,7 @@ import log from 'loglevel';
 const config = {
     // production config goes here
     api: {
-        base: 'https://gnosus.bisnode.cz',
-        socket: {
-            uri: 'wss://gnosus.bisnode.cz/ws-mq',
-        },
+        base: 'https://api.apixu.com/v1',
     },
     devTools: false,
     logLevel: log.levels.ERROR,

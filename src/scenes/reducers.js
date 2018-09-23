@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux-immutable';
-import { Map } from 'immutable';
+
+import autocompleteReducer from './Forecast/components/Search/components/Autocomplete/reducer';
+import weatherReducer from './Forecast/components/Search/components/Weather/reducer';
 
 const rootReducer = combineReducers({
-    init: (state = Map()) => (state),
+    autocomplete: autocompleteReducer,
+    weather: weatherReducer,
 });
 
 export default rootReducer;

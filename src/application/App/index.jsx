@@ -5,6 +5,7 @@ import log from 'loglevel';
 
 import translations from '../../services/translations';
 
+import Forecast from '../../scenes/Forecast';
 import Error from '../../scenes/Error';
 
 import './style.scss';
@@ -39,6 +40,7 @@ export default class App extends Component {
         return (
             <div className={'application'}>
                 <Favicon url={icon} />
+                <Forecast />
             </div>
         );
     }
