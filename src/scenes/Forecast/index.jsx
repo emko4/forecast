@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Switch, Route, withRouter } from 'react-router';
 import cx from 'classnames';
 

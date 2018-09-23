@@ -9,6 +9,43 @@
 }
 
 .forecast-weather-item .icon {
+  flex: 0 0 64px;
   width: 64px;
   height: 64px;
+}
+
+.forecast-weather-item .texts {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.forecast-weather-item .texts .temperatures {
+  display: flex;
+}
+
+.forecast-weather-item .texts .temperatures .temperature {
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.forecast-weather-item .texts .temperatures .temperature.negative {
+  color: #3cc5dc;
+}
+
+.forecast-weather-item .texts .temperatures .temperature.positive {
+  color: #e45252;
+}
+
+.forecast-weather-item .texts .temperatures .temperature.small {
+  font-size: 0.9em;
+  color: $text-color;
+}
+
+.forecast-weather-item .texts .condition-text {
+  font-size: 0.8em;
+  font-weight: bold;
 }

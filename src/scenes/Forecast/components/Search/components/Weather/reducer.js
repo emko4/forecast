@@ -7,7 +7,7 @@ import { FORECAST_REQUEST } from './constants';
 const WeatherRecord = new Record({
     loading: false,
     forecast: {},
-})
+});
 
 export default (state = new WeatherRecord(), action = {}) => {
     switch (action.type) {

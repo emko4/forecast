@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
 
-import { LOCALE_PREFIX } from './constants'
+import { LOCALE_PREFIX } from './constants';
 
 import hocConnect from './hocConnect';
 

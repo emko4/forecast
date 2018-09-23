@@ -9,7 +9,7 @@ const AutocompleteRecord = new Record({
     locations: [],
     open: false,
     selected: null,
-})
+});
 
 export default (state = new AutocompleteRecord(), action = {}) => {
     switch (action.type) {

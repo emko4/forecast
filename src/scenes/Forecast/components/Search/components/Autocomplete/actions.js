@@ -17,7 +17,7 @@ export function searchRequest(searchText) {
         },
         meta: {
             debounce: {
-                delay: 500,
+                delay: 250,
             },
         },
     };

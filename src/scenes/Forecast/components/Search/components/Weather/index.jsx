@@ -28,6 +28,16 @@ export default class Weather extends Component {
         item: null,
     };
 
+    componentDidMount() {
+        const { item, locale, forecastRequest } = this.props;
+
+        const currentId = _.get(item, 'id', null);
+
+        if (currentId !== null) {
+            forecastRequest(`${item.lat},${item.lon}`, locale);
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         const { item, forecastRequest } = this.props;
 
@@ -62,11 +72,15 @@ export default class Weather extends Component {
                     {location}
                 </div>
                 <div className={'current'}>
-                    <div className={'title'}>{'Current weather'}</div>
+                    <div className={'title'}>
+                        <FormattedMessage id={`${LOCALE_PREFIX}.current.title`} />
+                    </div>
                     <CurrentWeather weather={forecast.current} />
                 </div>
                 <div className={'forecast'}>
-                    <div className={'title'}>{'7 days forecast'}</div>
+                    <div className={'title'}>
+                        <FormattedMessage id={`${LOCALE_PREFIX}.forecast.title`} />
+                    </div>
                     {_.map(forecast.forecast.forecastday, (day, index) => (
                         <ForecastWeather key={index} weather={day} />
                     ))}

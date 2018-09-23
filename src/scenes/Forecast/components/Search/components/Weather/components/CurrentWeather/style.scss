@@ -9,6 +9,38 @@
 }
 
 .current-weather-item .icon {
+  flex: 0 0 64px;
   width: 64px;
   height: 64px;
+}
+
+.current-weather-item .texts {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.current-weather-item .texts .temperatures {
+  display: flex;
+}
+
+.current-weather-item .texts .temperatures .temperature {
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.current-weather-item .texts .temperatures .temperature.negative {
+  color: #3cc5dc;
+}
+
+.current-weather-item .texts .temperatures .temperature.positive {
+  color: #e45252;
+}
+
+.current-weather-item .texts .condition-text {
+  font-size: 0.8em;
+  font-weight: bold;
 }

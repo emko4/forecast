@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { currentRequest, forecastRequest } from './actions';
+import { forecastRequest } from './actions';
 
 function mapStateToProps(state) {
     return {
