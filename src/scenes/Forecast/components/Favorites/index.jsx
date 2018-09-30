@@ -17,8 +17,22 @@ export default class Favorites extends Component {
 
     static propTypes = {
         favorites: PropTypes.array.isRequired,
+        forecastRequest: PropTypes.func.isRequired,
+        locale: PropTypes.string.isRequired,
+        push: PropTypes.func.isRequired,
         removeFromFavorites: PropTypes.func.isRequired,
+        resetSearch: PropTypes.func.isRequired,
+        selectItem: PropTypes.func.isRequired,
     };
+
+    onItemClick = (item) => {
+        const { locale, forecastRequest, push, resetSearch, selectItem } = this.props;
+
+        resetSearch();
+        selectItem(item);
+        forecastRequest(`${item.lat},${item.lon}`, locale);
+        push('/search');
+    }
 
     onRemoveFromFavorite = (locationId) => {
         const { removeFromFavorites } = this.props;
@@ -43,6 +57,7 @@ export default class Favorites extends Component {
                     <FavoriteItem
                         key={favoriteItem.id}
                         data={favoriteItem}
+                        onClick={this.onItemClick}
                         onRemoveClick={this.onRemoveFromFavorite}
                     />
                 ))}
