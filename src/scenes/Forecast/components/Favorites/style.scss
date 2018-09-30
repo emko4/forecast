@@ -8,3 +8,15 @@
   height: 100%;
   overflow: auto;
 }
+
+.favorites .no-favorites {
+  margin-top: 40px;
+
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.favorites .favorites-list {
+  margin-top: 40px;
+  min-width: 500px;
+}

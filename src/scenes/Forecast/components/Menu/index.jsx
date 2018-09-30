@@ -13,14 +13,20 @@ import './style.scss';
 export default class Menu extends Component {
 
     static propTypes = {
-        replace: PropTypes.func.isRequired,
+        push: PropTypes.func.isRequired,
         setLocale: PropTypes.func.isRequired,
     };
 
-    onTitleClick = () => {
-        const { replace } = this.props;
+    onSearchClick = () => {
+        const { push } = this.props;
 
-        replace('/');
+        push('/search');
+    }
+
+    onFavoriteClick = () => {
+        const { push } = this.props;
+
+        push('/favorites');
     }
 
     changeLanguage = (lang) => () => {
@@ -32,8 +38,13 @@ export default class Menu extends Component {
     render() {
         return (
             <div className={cx('menu')}>
-                <div className={'title'} onClick={this.onTitleClick}>
-                    <FormattedMessage id={`${LOCALE_PREFIX}.title`} />
+                <div className={'links'}>
+                    <div className={'search'} onClick={this.onSearchClick}>
+                        <FormattedMessage id={`${LOCALE_PREFIX}.searchLink`} />
+                    </div>
+                    <div className={'favorite'} onClick={this.onFavoriteClick}>
+                        <FormattedMessage id={`${LOCALE_PREFIX}.favoriteLink`} />
+                    </div>
                 </div>
                 <div className={'localizations'}>
                     <div className={'flag'}>

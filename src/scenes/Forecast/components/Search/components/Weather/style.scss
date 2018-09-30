@@ -16,6 +16,10 @@
 }
 
 .weather .weather-wrap .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   font-weight: bold;
   text-transform: uppercase;
 

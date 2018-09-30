@@ -16,7 +16,7 @@ export default class Item extends PureComponent {
         onClick: () => {},
     };
 
-    oonClickItem = () => {
+    onClickItem = () => {
         const { item, onClick } = this.props;
 
         onClick(item);
@@ -26,7 +26,7 @@ export default class Item extends PureComponent {
         const { text } = this.props;
 
         return (
-            <div className={cx('autocomplete-item')} onClick={this.oonClickItem}>
+            <div className={cx('autocomplete-item')} onClick={this.onClickItem}>
                 {text}
             </div>
         );

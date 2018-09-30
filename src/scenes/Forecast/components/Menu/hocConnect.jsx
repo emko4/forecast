@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { replace } from 'connected-react-router';
+import { push } from 'connected-react-router';
 
 import { setLocale } from '../../../../services/translations/actions';
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ setLocale, replace }, dispatch);
+    return bindActionCreators({ setLocale, push }, dispatch);
 }
 
 export default function (InnerComponent) {

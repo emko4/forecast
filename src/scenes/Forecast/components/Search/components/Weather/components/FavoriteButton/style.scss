@@ -1,0 +1,19 @@
+@import '../../../../../../../../styles/constants';
+
+$icon-size: 32px;
+
+.favorite-button {
+  flex: 0 0 $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+
+  background: url('../../../../../../../../assets/favorites.png') center center no-repeat;
+
+  cursor: pointer;
+}
+
+.favorite-button.selected {
+  background: url('../../../../../../../../assets/favorites-active.png') center center no-repeat;
+
+  cursor: auto;
+}

@@ -10,14 +10,22 @@
   background-color: rgba(1, 208, 162, 0.50);
 }
 
-.menu .title {
-  font-size: 1.7em;
-  font-weight: bold;
+.menu .links {
+  display: flex;
+}
 
+.menu .links > div {
+  padding: 5px 10px 3px;
+
+  border-left: 2px solid $text-color;
+
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.menu .links > div:first-of-type {
+  border-left: 0;
 }
 
 .menu .localizations {
