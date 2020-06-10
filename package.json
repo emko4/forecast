@@ -1,7 +1,7 @@
 {
     "name": "forecast",
     "version": "0.0.1",
-    "description": "Linksoft Forecast",
+    "description": "Forecast",
     "author": {
         "name": "Martin Kadlec",
         "email": "martin@kadlec.info"
