@@ -3,7 +3,6 @@ const _ = require('lodash');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const autoprefixer = require('autoprefixer');
-const eslintFormatter = require('eslint-friendly-formatter');
 
 const Extract = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -67,12 +66,6 @@ let config = {
                         loader: 'babel-loader',
                         // options from .babelrc
                     },
-                    // {
-                    //     loader: 'eslint-loader',
-                    //     options: {
-                    //         formatter: eslintFormatter,
-                    //     },
-                    // },
                 ],
             },
             {

@@ -12,7 +12,7 @@ function mapStateToProps(state) {
     };
 }
 
-export default function (InnerComponent) {
+export default (InnerComponent) => {
     @connect(mapStateToProps)
     class Translation extends Component {
 
@@ -33,4 +33,4 @@ export default function (InnerComponent) {
     }
 
     return Translation;
-}
+};

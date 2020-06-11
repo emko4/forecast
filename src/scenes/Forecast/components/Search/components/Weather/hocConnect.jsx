@@ -26,7 +26,7 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ forecastRequest, addToFavorites }, dispatch);
 }
 
-export default function (InnerComponent) {
+export default (InnerComponent) => {
     @connect(mapStateToProps, mapDispatchToProps)
     class HocConnect extends Component {
 
@@ -41,4 +41,4 @@ export default function (InnerComponent) {
     }
 
     return HocConnect;
-}
+};

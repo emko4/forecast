@@ -10,11 +10,7 @@ import Error from '../Error';
 import './style.scss';
 
 @withRouter
-export default class Gnosus extends Component {
-
-    static propTypes = {
-
-    };
+export default class Forecast extends Component {
 
     render() {
         return (

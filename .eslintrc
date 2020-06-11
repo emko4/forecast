@@ -35,6 +35,7 @@
     "no-constant-condition": "error",
     "no-labels": "error",
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "func-names": ["warn", "always", { "generators": "never" }],
     "func-style": "off",
     "object-curly-newline": "off",
     "function-paren-newline": "off",
@@ -66,6 +67,7 @@
     "react/jsx-pascal-case": "warn",
     "react/jsx-sort-props": "off",
     "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/no-multi-comp": "warn",
     "react/no-set-state": "off",
     "react/no-array-index-key": "off",
@@ -76,8 +78,9 @@
     // react plugin rules
     "react/jsx-indent": ["error", 4],
     "react/prefer-es6-class": "error",
-    "react/prefer-stateless-function": "off",
     "react/sort-prop-types": "warn",
+    "react/static-property-placement": "off",
+    "react/prefer-stateless-function": "off",
 
     // jsx-a11y plugin rules
     "jsx-a11y/no-static-element-interactions": "off",
