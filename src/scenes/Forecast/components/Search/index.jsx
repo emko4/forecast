@@ -8,10 +8,6 @@ import './style.scss';
 
 export default class Search extends Component {
 
-    static propTypes = {
-
-    };
-
     render() {
         return (
             <div className={cx('search')}>

@@ -32,13 +32,13 @@ export default class Favorites extends Component {
         selectItem(item);
         forecastRequest(`${item.lat},${item.lon}`, locale);
         push('/search');
-    }
+    };
 
     onRemoveFromFavorite = (locationId) => {
         const { removeFromFavorites } = this.props;
 
         removeFromFavorites(locationId);
-    }
+    };
 
     renderContent = () => {
         const { favorites } = this.props;
@@ -63,7 +63,7 @@ export default class Favorites extends Component {
                 ))}
             </div>
         );
-    }
+    };
 
     render() {
         return (

@@ -75,7 +75,7 @@ TranslationPlugin.prototype.apply = function (compiler) {
     compiler.hooks.afterEnvironment.tap('TranslationPlugin', () => {
         // eslint-disable-next-line no-param-reassign
         compiler.watchFileSystem = new IgnoringWatchFileSystem(compiler.watchFileSystem, [self.options.output]);
-    })
+    });
 
     // add translation files to watch (not generated!)
     if (self.options.watchLocales) {

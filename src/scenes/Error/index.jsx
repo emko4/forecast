@@ -9,7 +9,7 @@ export default class Error extends Component {
 
     onButtonClick = () => {
         window.location.href = '/';
-    }
+    };
 
     render() {
         return (

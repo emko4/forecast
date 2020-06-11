@@ -4,7 +4,7 @@ import { encode } from 'querystring';
 import ApiError from '../errors/apiError';
 import { getParamString, getParamObject, parametrize, getJsonResult } from './helpers/fetch';
 
-export default function (...params) {
+export default (...params) => {
     // default request options
     const reqOptions = _.merge({
         headers: {
@@ -52,4 +52,4 @@ export default function (...params) {
         if (_.isFinite(_err.code)) throw _err;
         throw new ApiError(null, null, 500, null, uri);
     });
-}
+};

@@ -7,7 +7,7 @@ function mapStateToProps(state) {
     };
 }
 
-export default function (InnerComponent) {
+export default (InnerComponent) => {
     @connect(mapStateToProps)
     class HocConnect extends Component {
 
@@ -22,4 +22,4 @@ export default function (InnerComponent) {
     }
 
     return HocConnect;
-}
+};

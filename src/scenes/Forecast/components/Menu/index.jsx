@@ -21,19 +21,19 @@ export default class Menu extends Component {
         const { push } = this.props;
 
         push('/search');
-    }
+    };
 
     onFavoriteClick = () => {
         const { push } = this.props;
 
         push('/favorites');
-    }
+    };
 
     changeLanguage = (lang) => () => {
         const { setLocale } = this.props;
 
         setLocale(lang);
-    }
+    };
 
     render() {
         return (
