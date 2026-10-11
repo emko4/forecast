@@ -1,0 +1,10 @@
+@import '../../styles/constants';
+
+.forecast {
+  height: 100%;
+  overflow: hidden;
+}
+
+.forecast .content {
+  height: calc(100% - #{$menu-height});
+}

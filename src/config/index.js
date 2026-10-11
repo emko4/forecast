@@ -8,8 +8,8 @@ import languagesConfig from './languages';
  * LOAD NODE_ENV CONFIG
  */
 const envNode = process.env.NODE_ENV;
-// eslint-disable-next-line import/no-dynamic-require
-const envNodeConfig = require(`./enviromentNode/${envNode}.js`).default;
+const envNodeConfigs = import.meta.glob('./enviromentNode/*.js', { eager: true, import: 'default' });
+const envNodeConfig = envNodeConfigs[`./enviromentNode/${envNode}.js`];
 
 // Get apiBase from NODE_ENV config
 const apiBase = _.get(envNodeConfig, 'api.base');

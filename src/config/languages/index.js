@@ -9,8 +9,8 @@
  *  }
  */
 
-// because webpack config need this config too
-module.exports = {
+// the build reads this config too (vite.config.js)
+export default {
     languages: {
         cs: {
             key: 'cs',

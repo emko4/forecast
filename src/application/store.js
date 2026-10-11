@@ -49,23 +49,19 @@ export default function configureStore(initialState = Map()) {
     let sagaTask = sagaMiddleware.run(rootSaga);
 
     // Enable hot reload where available.
-    if (module.hot) {
-        // Enable Webpack hot module replacement for reducers.
-        module.hot.accept('./reducers', () => {
-            // eslint-disable-next-line global-require
-            const newRootReducer = require('./reducers').default;
-
-            store.replaceReducer(newRootReducer);
+    if (import.meta.hot) {
+        // Enable hot module replacement for reducers.
+        import.meta.hot.accept('./reducers', (newModule) => {
+            if (newModule) store.replaceReducer(connectRouter(history)(newModule.default));
         });
 
-        // Enable Webpack hot module replacement for sagas.
-        module.hot.accept('./sagas', () => {
-            // eslint-disable-next-line global-require
-            const getNewSagas = require('./sagas').default;
+        // Enable hot module replacement for sagas.
+        import.meta.hot.accept('./sagas', (newModule) => {
+            if (!newModule) return;
 
             sagaTask.cancel();
             sagaTask.done.then(() => {
-                sagaTask = sagaMiddleware.run(getNewSagas);
+                sagaTask = sagaMiddleware.run(newModule.default);
             });
         });
     }
