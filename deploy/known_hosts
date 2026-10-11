@@ -1,0 +1,6 @@
+# Host key of the production VPS, pinned for CI deploys (public information).
+# Verified 2026-09-18: SHA256:+tiOok66EofPTattq1bUoVVm40QzJNaFf/RdoXKlxn0
+# If the server is ever reinstalled, its host key changes: re-scan, compare
+# the fingerprint on the server itself, then update this file.
+# 195.181.211.171:22 SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4
+195.181.211.171 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIRmmUmNuXzCDp4d/9V3FRZFNonUnSX0SClZh8J5h1cC
