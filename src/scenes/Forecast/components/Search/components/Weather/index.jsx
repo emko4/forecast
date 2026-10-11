@@ -57,7 +57,7 @@ export default class Weather extends Component {
         const { item, addToFavorites } = this.props;
 
         addToFavorites(item);
-    }
+    };
 
     renderLoader = () => {
         const { loading } = this.props;
@@ -67,7 +67,7 @@ export default class Weather extends Component {
         return (
             <div className={'loader'} />
         );
-    }
+    };
 
     renderForecast = () => {
         const { forecast, loading, isInFavorites } = this.props;
@@ -98,7 +98,7 @@ export default class Weather extends Component {
                 </div>
             </div>
         );
-    }
+    };
 
     render() {
         return (

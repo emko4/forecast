@@ -11,5 +11,5 @@ export default {
     "scenes.Forecast.components.Menu.favoriteLink": "Favorites",
     "scenes.Forecast.components.Search.components.Autocomplete.placeholder": "Search",
     "scenes.Forecast.components.Search.components.Weather.current.title": "Current weather",
-    "scenes.Forecast.components.Search.components.Weather.forecast.title": "7 days forecast"
+    "scenes.Forecast.components.Search.components.Weather.forecast.title": "3 days forecast"
 };

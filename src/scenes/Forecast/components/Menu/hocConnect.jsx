@@ -9,7 +9,7 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ setLocale, push }, dispatch);
 }
 
-export default function (InnerComponent) {
+export default (InnerComponent) => {
     @connect(null, mapDispatchToProps)
     class HocConnect extends Component {
 
@@ -24,4 +24,4 @@ export default function (InnerComponent) {
     }
 
     return HocConnect;
-}
+};

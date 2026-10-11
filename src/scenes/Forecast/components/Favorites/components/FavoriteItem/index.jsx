@@ -15,20 +15,20 @@ export default class FavoriteItem extends Component {
     static defaultProps = {
         onClick: () => {},
         onRemoveClick: () => {},
-    }
+    };
 
     onItemClick = () => {
         const { data, onClick } = this.props;
 
         onClick(data);
-    }
+    };
 
     onRemoveButtonClick = (_e) => {
         const { data, onRemoveClick } = this.props;
 
         _e.stopPropagation();
         onRemoveClick(data.id);
-    }
+    };
 
     render() {
         const { data } = this.props;

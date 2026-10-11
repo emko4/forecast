@@ -20,7 +20,7 @@ export default class Item extends PureComponent {
         const { item, onClick } = this.props;
 
         onClick(item);
-    }
+    };
 
     render() {
         const { text } = this.props;

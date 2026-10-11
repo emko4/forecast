@@ -11,5 +11,5 @@ export default {
     "scenes.Forecast.components.Menu.favoriteLink": "Oblíbené",
     "scenes.Forecast.components.Search.components.Autocomplete.placeholder": "Hledat",
     "scenes.Forecast.components.Search.components.Weather.current.title": "Aktuální počasí",
-    "scenes.Forecast.components.Search.components.Weather.forecast.title": "7 denní předpověď"
+    "scenes.Forecast.components.Search.components.Weather.forecast.title": "3 denní předpověď"
 };

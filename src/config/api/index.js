@@ -4,20 +4,20 @@ export default (apiBase) => ({
         search: {
             uri: `${apiBase}/search.json`,
             qs: {
-                key: 'a758f4d24494458fa1763006182309',
+                key: '0e80460f600c423f8b3141458201006',
             },
         },
         current: {
             uri: `${apiBase}/current.json`,
             qs: {
-                key: 'a758f4d24494458fa1763006182309',
+                key: '0e80460f600c423f8b3141458201006',
             },
         },
         forecast: {
             uri: `${apiBase}/forecast.json`,
             qs: {
-                key: 'a758f4d24494458fa1763006182309',
-                days: 7,
+                key: '0e80460f600c423f8b3141458201006',
+                days: 3,
             },
         },
     },

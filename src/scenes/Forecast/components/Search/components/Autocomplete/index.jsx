@@ -33,13 +33,13 @@ export default class Autocomplete extends Component {
 
         if (_.isEmpty(searchText)) resetSearch();
         else searchRequest(_e.target.value);
-    }
+    };
 
     onMenuItemClick = (item) => {
         const { selectItem } = this.props;
 
         selectItem(item);
-    }
+    };
 
     renderResults = () => {
         const { results, open } = this.props;
@@ -58,7 +58,7 @@ export default class Autocomplete extends Component {
                 ))}
             </div>
         );
-    }
+    };
 
     render() {
         const { searchText, intl } = this.props;
