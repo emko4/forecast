@@ -7,13 +7,11 @@ import { addLocaleData } from 'react-intl';
 import config from '../../config';
 
 import { localeKey, SET_LOCALE } from './constants';
+import localesData from './intl/localeData';
 
 // add locale data of used languages
 _.each(config.languages, (language) => {
-    // eslint-disable-next-line import/no-dynamic-require, global-require
-    const localeData = require(`react-intl/locale-data/${language.key}`);
-
-    addLocaleData(localeData);
+    addLocaleData(localesData[language.key]);
 });
 
 // default language from config

@@ -1,5 +1,3 @@
-import '@babel/polyfill';
-import 'isomorphic-fetch';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -29,10 +27,11 @@ ReactDOM.render(
     app,
 );
 
-if (module.hot) {
-    module.hot.accept('./Root', () => {
-        // eslint-disable-next-line global-require
-        const NewRoot = require('./Root').default;
+if (import.meta.hot) {
+    import.meta.hot.accept('./Root', (newModule) => {
+        if (!newModule) return;
+
+        const NewRoot = newModule.default;
 
         ReactDOM.render(
             <NewRoot
