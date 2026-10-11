@@ -113,7 +113,7 @@ export default [
         },
     },
     {
-        files: ['vite/**/*.js', 'vite.config.js', 'src/config/languages/index.js'],
+        files: ['vite/**/*.js', 'vite.config.js'],
         languageOptions: { globals: { ...globals.node } },
     },
 ];

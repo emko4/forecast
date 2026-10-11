@@ -1,13 +1,13 @@
-import { createRequire } from 'node:module';
 import path from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-import translations from './vite/translations';
+import translations from './vite/translations.js';
+// The languages are the application's own configuration, read here as the old
+// build read it.
+import languagesConfig from './src/config/languages/index.js';
 
-// The languages are the application's own configuration (it is a CommonJS
-// file, read here the same way the old build read it).
-const { languages } = createRequire(import.meta.url)('./src/config/languages');
+const { languages } = languagesConfig;
 
 export default defineConfig(({ mode }) => ({
     plugins: [
