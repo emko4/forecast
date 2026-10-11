@@ -1,4 +1,23 @@
-# forecast
+Forecast
+=================
+ 
+## Development (localhost)
+
+* Install packages by [Yarn](https://yarnpkg.com/en/)
+    * `yarn`
+* Set *NODE_ENV* to *development*
+* Run npm script start by [Yarn](https://yarnpkg.com/en/) 
+    * `yarn start`
+* Dev server is running on http://localhost:8080    
+
+## Production
+
+* Install packages by [Yarn](https://yarnpkg.com/en/)
+    * `yarn`
+* Set *NODE_ENV* to *production*
+* Run npm script build by [Yarn](https://yarnpkg.com/en/) 
+    * `yarn build`
+* Production files are in *dist* folder
 
 A weather forecast page: search a place, see its current weather and forecast,
 keep favourites; in Czech and English. React, Redux and redux-saga, built with
@@ -22,13 +41,11 @@ in the browser); a missing script or stylesheet is still a 404.
 
 ## The source
 
-`src/` was **recovered in October 2026 from the builds' source maps** — the
-original project folder was never pushed here. The first commit of it is the
-source as the 2018 build held it (`site/distOld/js/app.bundle.js.map`), the
-second as the 2020 builds did (`site/distProd/js/app.bundle.js.map`). What a
-source map does not carry is missing: `package.json`, the webpack
-configuration, the stylesheets' source and the pictures. So this is the code
-to read, not yet a project that builds.
+This is the project as it was written, 2018–2020, with its history: it lived
+on Bitbucket (bitbucket.org/emko4/forecast) and was brought here in October
+2026. For a few days before that, `src/` here held a copy recovered from the
+builds' source maps; the original turned out identical to it, file for file,
+and takes its place.
 
 `deploy/` holds what the server needs to know: the hostnames (`site.conf`),
 the key releases are handed over with (`deploy.pub`) and the server's host key

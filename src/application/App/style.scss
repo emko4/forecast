@@ -1,0 +1,36 @@
+@import '../../styles/constants';
+
+// Import flags styles
+$flag-icon-css-path: '~flag-icon-css/flags' !default;
+$flag-icon-rect-path: '~flag-icon-css/flags/4x3' !default;
+$flag-icon-square-path: '~flag-icon-css/flags/1x1' !default;
+@import '~flag-icon-css/sass/flag-icon';
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 12pt;
+  font-family: 'Arial';
+}
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+input, button {
+  font-size: 12pt;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+.application {
+  height: 100%;
+
+  color: $text-color;
+}

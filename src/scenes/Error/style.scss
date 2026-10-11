@@ -1,0 +1,43 @@
+@import '../../styles/constants';
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.error-page .error-page-content {
+  color: $base-color;
+}
+
+.error-page .error-page-content .title {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.error-page .error-page-content .action-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.5em;
+}
+
+.error-page .error-page-content .action-wrap .refresh-button {
+  position: relative;
+  padding: 10px 15px;
+
+  border: 0;
+  background-color: $base-color;
+  outline: 0;
+
+  color: white;
+
+  cursor: pointer;
+  user-select: none;
+}

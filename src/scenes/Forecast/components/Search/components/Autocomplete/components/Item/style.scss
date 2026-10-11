@@ -1,0 +1,17 @@
+@import '../../../../../../../../styles/constants';
+
+.autocomplete-item {
+  padding: 5px 10px;
+
+  border-bottom: 1px solid $base-color;
+}
+
+.autocomplete-item:last-of-type {
+  border: 0;
+}
+
+.autocomplete-item:hover {
+  background-color: #01d0a2;
+
+  cursor: pointer;
+}

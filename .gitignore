@@ -1,0 +1,7 @@
+index.html
+yarn-error.log
+.idea/
+dist/*
+!dist/.*
+node_modules/
+src/services/translations/intl/
