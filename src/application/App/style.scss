@@ -1,10 +1,11 @@
-@import '../../styles/constants';
+@use '../../styles/constants' as *;
 
 // Import flags styles
-$flag-icon-css-path: '~flag-icon-css/flags' !default;
-$flag-icon-rect-path: '~flag-icon-css/flags/4x3' !default;
-$flag-icon-square-path: '~flag-icon-css/flags/1x1' !default;
-@import '~flag-icon-css/sass/flag-icon';
+@use '~flag-icon-css/sass/flag-icon' with (
+  $flag-icon-css-path: '~flag-icon-css/flags',
+  $flag-icon-rect-path: '~flag-icon-css/flags/4x3',
+  $flag-icon-square-path: '~flag-icon-css/flags/1x1'
+);
 
 html {
   width: 100%;

@@ -60,6 +60,11 @@ the one in use (a development build of June 2020), a production build of the
 same day and one of October 2018. They are in this repository's history
 (`site/dist`, `site/distProd`, `site/distOld`).
 
+The stylesheets are Sass modules (`@use`). One library is not: the flags'
+(flag-icon-css 3) is written with `@import`, which Sass will remove in its
+version 3. The build says so each time, and the page stays on Sass 1 for as
+long as it uses that library.
+
 Translations live beside what they translate (`locales/<language>.yml`); the
 build gathers them (`vite/translations.js`).
 
